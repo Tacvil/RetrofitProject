@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="height_image_view">110dp</dimen>
+    <dimen name="width_image_view">110dp</dimen>
+    <dimen name="text_size_tvTitle">16sp</dimen>
+    <dimen name="marginStart_llListItem">8dp</dimen>
+    <dimen name="padding_clListItem">5dp</dimen>
+    <dimen name="card_corner_radius_cvListItem">6dp</dimen>
+    <dimen name="margin_start_cvListItem">5dp</dimen>
+    <dimen name="margin_top_cvListItem">5dp</dimen>
+    <dimen name="margin_end_cvListItem">5dp</dimen>
+</resources>
