@@ -2,13 +2,13 @@ package com.example.retrofitproject.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.retrofitproject.adapter.ProductAdapter
-import com.example.retrofitproject.database.DatabaseRepository
-import com.example.retrofitproject.database.room.ProductDatabase
-import com.example.retrofitproject.database.room.ProductRepository
+import com.example.retrofitproject.app.MainApp
 import com.example.retrofitproject.databinding.ActivityMainBinding
 import com.example.retrofitproject.retrofit.ProductApi
+import com.example.retrofitproject.viewModel.MainViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -19,7 +19,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var adapter: ProductAdapter
     private lateinit var binding: ActivityMainBinding
     private lateinit var productApi: ProductApi
-    private lateinit var repository: DatabaseRepository
+
+    private val viewModel: MainViewModel by lazy {
+        ViewModelProvider(this, MainViewModel.MainViewModelFactory((application as MainApp).database))[MainViewModel::class.java]
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,22 +31,16 @@ class MainActivity : AppCompatActivity() {
 
         initRcView()
         initRetrofitApi()
-        initBd()
 
         CoroutineScope(Dispatchers.IO).launch {
             val allProductsApi = productApi.getAllProduct()
-            repository.insert(allProductsApi.products)
-            val listAllProducts = repository.getAllProducts()
+            viewModel.insert(allProductsApi.products)
+            val listAllProducts = viewModel.getAllProducts()
 
             runOnUiThread {
                 adapter.submitList(listAllProducts)
             }
         }
-    }
-
-    private fun initBd() {
-        val dao = ProductDatabase.getInstance(applicationContext).getUserDao()
-        repository = ProductRepository(dao)
     }
 
     private fun initRcView() {
