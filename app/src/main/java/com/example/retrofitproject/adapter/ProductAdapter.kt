@@ -23,6 +23,7 @@ class ProductAdapter : ListAdapter<ProductModel, ProductAdapter.Holder>(Comparat
             textViewRating.text = productModel.rating.toString()
             val strPrice = "${productModel.price.toString()} $"
             textViewPrice.text = strPrice
+
             Glide.with(view)
                 .load(productModel.images[0])
                 .transform(RoundedCorners(20))
