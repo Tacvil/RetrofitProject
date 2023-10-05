@@ -1,13 +1,13 @@
-package com.example.retrofitproject.activity
+package com.example.retrofitproject.presentation.ui
 
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.retrofitproject.adapter.ProductAdapter
+import com.example.retrofitproject.presentation.adapters.ProductAdapter
 import com.example.retrofitproject.databinding.ActivityMainBinding
-import com.example.retrofitproject.viewModel.MainViewModel
+import com.example.retrofitproject.presentation.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 

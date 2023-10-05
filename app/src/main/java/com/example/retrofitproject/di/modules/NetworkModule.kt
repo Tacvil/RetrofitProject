@@ -1,6 +1,6 @@
-package com.example.retrofitproject.modules
+package com.example.retrofitproject.di.modules
 
-import com.example.retrofitproject.retrofit.ProductApi
+import com.example.retrofitproject.data.remote.api.ProductApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

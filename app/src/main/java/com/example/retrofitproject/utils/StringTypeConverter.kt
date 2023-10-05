@@ -1,4 +1,4 @@
-package com.example.retrofitproject.utilits
+package com.example.retrofitproject.utils
 
 import androidx.room.TypeConverter
 

@@ -1,5 +1,6 @@
-package com.example.retrofitproject.retrofit
+package com.example.retrofitproject.data.remote.api
 
+import com.example.retrofitproject.data.local.model.Products
 import retrofit2.http.GET
 
 interface ProductApi {

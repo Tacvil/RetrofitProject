@@ -1,8 +1,8 @@
-package com.example.retrofitproject.modules
+package com.example.retrofitproject.di.modules
 
 import android.content.Context
 import androidx.room.Room
-import com.example.retrofitproject.database.room.ProductDatabase
+import com.example.retrofitproject.data.local.database.ProductDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

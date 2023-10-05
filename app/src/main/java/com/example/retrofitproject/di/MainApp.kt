@@ -1,7 +1,6 @@
-package com.example.retrofitproject.app
+package com.example.retrofitproject.di
 
 import android.app.Application
-import com.example.retrofitproject.database.room.ProductDatabase
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp

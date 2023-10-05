@@ -1,4 +1,4 @@
-package com.example.retrofitproject.adapter
+package com.example.retrofitproject.presentation.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.retrofitproject.R
-import com.example.retrofitproject.database.models.ProductModel
+import com.example.retrofitproject.data.local.model.ProductModel
 import com.example.retrofitproject.databinding.ListItemBinding
 
 class ProductAdapter : ListAdapter<ProductModel, ProductAdapter.Holder>(Comparator()) {

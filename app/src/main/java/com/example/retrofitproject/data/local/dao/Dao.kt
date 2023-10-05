@@ -1,10 +1,10 @@
-package com.example.retrofitproject.database.room
+package com.example.retrofitproject.data.local.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.retrofitproject.database.models.ProductModel
+import com.example.retrofitproject.data.local.model.ProductModel
 
 @Dao
 interface Dao {
