@@ -19,5 +19,5 @@ class MainViewModel @Inject constructor(
 
     suspend fun getProductsFromDatabase() = repository.getAllProducts()
 
-     suspend fun insert(user: List<ProductModel>) = repository.insert(user)
+    suspend fun insert(user: List<ProductModel>) = repository.insert(user)
 }
